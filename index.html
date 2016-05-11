@@ -61,3 +61,81 @@
     
   </body>
 </html>
+
+<html>
+<head>
+<title>Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="1000">
+<p>Ваш браузер не поддерживает рисование.</p>
+</canvas>
+</body>
+</html>
+<script type="text/javascript">
+var myCanvas = document.getElementById('myCanvas');
+var ctx = myCanvas.getContext('2d');
+
+//основа
+ctx.beginPath();
+ctx.strokeStyle = 'dark'; 
+ctx.lineWidth = 3;
+ctx.moveTo(200,100);
+ctx.lineTo(200,500);
+ctx.lineTo(280,500);
+ctx.lineTo(280,100);
+ctx.lineTo(240,20);
+ctx.closePath();
+ctx.fillStyle = 'deepskyblue';
+ctx.fill();
+ctx.stroke();
+//левое крыло
+ctx.beginPath();
+ctx.strokeStyle = 'dark'; 
+ctx.lineWidth = 3;
+ctx.moveTo(200,500);
+ctx.lineTo(175,550);
+ctx.lineTo(150,550);
+ctx.lineTo(150,400);
+ctx.lineTo(200,300);
+ctx.closePath();
+ctx.fillStyle = 'gray';
+ctx.fill();
+ctx.stroke();
+//правое крыло
+ctx.beginPath();
+ctx.strokeStyle = 'dark'; 
+ctx.lineWidth = 3;
+ctx.moveTo(280,500);
+ctx.lineTo(305,550);
+ctx.lineTo(330,550);
+ctx.lineTo(330,400);
+ctx.lineTo(280,300);
+ctx.closePath();
+ctx.fillStyle = 'gray';
+ctx.fill();
+ctx.stroke();
+//окна
+ctx.beginPath();
+ctx.strokeStyle = 'dark'; 
+ctx.lineWidth = 3;
+ctx.arc(240,125, 10, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle = 'dark'; 
+ctx.lineWidth = 3;
+ctx.arc(240,180, 10, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//текст
+ctx.fillStyle = "black";
+ctx.font = 'bold 40px sans serif';
+ctx.fillText("Вариант №12, М-11, Прокопьев Н.", 350, 200);
+
+
+</script>

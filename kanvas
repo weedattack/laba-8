@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="1000">
+<p>Ваш браузер не поддерживает рисование.</p>
+</canvas>
+</body>
+</html>
+<script type="text/javascript">
+var myCanvas = document.getElementById('myCanvas');
+var ctx = myCanvas.getContext('2d');
+
+//голова
+ctx.beginPath();
+      ctx.scale(1.5, 1);
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 2;
+ctx.arc(175, 175, 100, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = '#EEF273';
+ctx.fill();
+ctx.stroke();
+//нос
+
+
+      ctx.beginPath();
+      ctx.scale(3, 1);
+ctx.strokeStyle = '#AAAC61'; 
+ctx.lineWidth = 2;
+ctx.arc(59, 185, 10, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = '#AAAC61';
+ctx.fill();
+ctx.stroke();
+
+//1 глаз
+
+ctx.beginPath();
+      ctx.scale(1, 7);
+ctx.strokeStyle = '#309DC8'; 
+ctx.lineWidth = 2;
+ctx.arc(50, 18, 3, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = '#309DC8';
+ctx.fill();
+ctx.stroke();
+//2 глаз
+
+ctx.beginPath();      
+ctx.strokeStyle = '#309DC8'; 
+ctx.lineWidth = 2;
+ctx.arc(68, 18, 3, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = '#309DC8';
+ctx.fill();
+ctx.stroke();
+
+//зрачок 1
+
+ctx.beginPath();      
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 2;
+ctx.arc(69, 20, 0.8, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'black';
+ctx.fill();
+ctx.stroke();
+
+// зрачок 2
+
+
+ctx.beginPath();      
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 2;
+ctx.arc(51, 20, 0.8, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'black';
+ctx.fill();
+ctx.stroke();
+
+//рот
+ctx.beginPath();  
+ctx.scale(2, 1);    
+ctx.strokeStyle = 'red'; 
+ctx.lineWidth = 2;
+ctx.arc(30, 33, 2, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'red';
+ctx.fill();
+ctx.stroke();
+
+
+//текст
+ctx.scale(0.1, 0.1);
+ctx.fillStyle = "black";
+ctx.font = 'bold 40px sans serif';
+ctx.fillText("Вариант №18, М-11, Прокопьев Н.", 35, 40);
+
+
+
+
+
+
+
+
+
+
+  </script>
+ </head>
+ <body>
+</html>
